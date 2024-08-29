@@ -1,0 +1,14 @@
+---
+import { type CollectionEntry } from "astro:content";
+import PostListItem from "./post-list-item.astro";
+
+type Props = {
+  posts: CollectionEntry<"blog">[];
+};
+
+const { posts } = Astro.props;
+---
+
+<div>
+  {(posts ?? []).map((post) => <PostListItem post={post} />)}
+</div>

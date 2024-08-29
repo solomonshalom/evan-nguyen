@@ -1,0 +1,29 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import Footer from "./footer.astro";
+import Header from "./header.astro";
+import Meta from "./meta.astro";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-new-ui-theme="light--warm">
+  <head>
+    <Meta title={title ? `${title} · ${SITE_TITLE}` : SITE_TITLE} description={description ?? SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="front-page">
+        <slot />
+      </div>
+      <Footer />
+    </main>
+  </body>
+</html>

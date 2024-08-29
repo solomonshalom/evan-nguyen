@@ -1,0 +1,11 @@
+---
+const props = Astro.props;
+---
+
+<div {...props}>
+  <img
+    src={props.src ? `${props.src}?w=1024&q=70` : ""}
+    alt={props.alt ?? ""}
+  />
+  <span>{props.alt}</span>
+</div>

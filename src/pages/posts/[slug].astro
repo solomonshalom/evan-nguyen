@@ -1,0 +1,45 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../../components/layout.astro";
+import Tag from "../../components/tag.astro";
+import DateTag from "../../components/date-tag.astro";
+import PostContent from "../../components/post/post-content.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+type Props = {
+  post: CollectionEntry<"blog">;
+};
+
+const { post } = Astro.props;
+const { title, description, date, tags, cover } = post.data;
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+  <div>
+    <div>
+      <h1>{post.data.title}</h1>
+      <p class="post-summary">{post.data.description}</p>
+    </div>
+    <div class="meta">
+      <DateTag date={post.data.date} />
+      {post.data.tags?.map((tag) => <Tag tag={tag} />)}
+    </div>
+    {
+      post.data.cover && (
+        <figure class="cover-image">
+        <img src={`${post.data.cover}?w=1200&q=80`} alt="cover" />
+        </figure>
+      )
+    }
+  </div>
+  <article>
+    <PostContent post={post} />
+  </article>
+</Layout>

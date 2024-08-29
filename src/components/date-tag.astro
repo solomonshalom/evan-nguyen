@@ -1,0 +1,13 @@
+---
+type Props = {
+  date: string;
+};
+
+const { date } = Astro.props;
+---
+
+<a
+  href={`/date/${encodeURI(new Date(date).getFullYear().toString())}`}
+  target="_self"
+  class="meta-date"
+>{date}</a>

@@ -1,0 +1,13 @@
+---
+import { MENUS } from "../config";
+---
+
+<ul>
+  {
+    MENUS.map((item) => (
+      <li><a href={item.link}>
+        {item.title}
+      </a></li>
+    ))
+  }
+</ul>
