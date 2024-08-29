@@ -1,7 +1,7 @@
 {
-  "name": "@new-ui/journal",
+  "name": "evan-nguyen",
   "version": "0.1.0",
-  "description": "Astro blog template.",
+  "description": "A blog for Evan Nguyen",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/New-Templates/journal.git"
+    "url": "git+https://github.com/solomonshalom/evan-nguyen"
   },
   "author": "@planetabhi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/New-Templates/journal/issues"
+    "url": "https://github.com/solomonshalom/evan-nguyen/issues"
   },
-  "homepage": "https://github.com/New-Templates/journal#readme",
+  "homepage": "https://github.com//solomonshalom/evan-nguyen#readme",
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/mdx": "^3.1.4",

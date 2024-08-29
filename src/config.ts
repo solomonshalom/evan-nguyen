@@ -1,7 +1,7 @@
 export const SITE_FAVICON = "/favicon.png";
-export const SITE_LOGO = "/journal-logo.svg";
-export const SITE_TITLE = "Journal";
-export const SITE_DESCRIPTION =
+export const SITE_LOGO = "/logo.svg";
+export const SITE_TITLE = "Evan Nguyen";
+export const SITE_DESCRIPTION = "Unscripted, unfiltered thougts from me!"
   "Blog";
 
 export const MENUS = [
@@ -16,8 +16,8 @@ export const MENUS = [
     target: "_self",
   },
   {
-    title: "Download",
-    link: "https://new-ui.com/templates/journal",
+    title: "Socials",
+    link: "https://instagram.com/ekm.nguyen",
     target: "_blank",
   }
 ];
