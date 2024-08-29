@@ -1,4 +1,4 @@
 # Evan Nguyen
-![Preview of Evan's Blog]()
+![image](https://github.com/user-attachments/assets/a55878bd-c5cf-464d-92bf-7ec527f5f74d)
 
-An Astro blog template for Evan Nguyen. Based [on] [Getting started guide](https://new-ui.com/docs/templates/journal) (^０^)ノ
+An Astro blog template for Evan Nguyen. Based [on] [Journal](https://new-ui.com/docs/templates/journal) (^０^)ノ
